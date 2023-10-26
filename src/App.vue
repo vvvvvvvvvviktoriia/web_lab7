@@ -1,6 +1,7 @@
 <template>
   <header class="header">
-    <a href="main.html"><img class="logo" src="logo1.jpg" alt="Логотип"></a>
+    <a href="main.html"><img class="logo" src="./assets/logo1.jpg"
+                             alt="Логотип"></a>
     <h1 class="animate">Publishing World</h1>
     <div class="burger-menu">
       <input id="menu-toggle" type="checkbox" />
@@ -30,7 +31,11 @@
 
             <password-componnent></password-componnent>
 
-            <names-component></names-component>
+            <last-name-component></last-name-component>
+
+            <name-component></name-component>
+
+            <third-name-component></third-name-component>
 
             <calendar-component></calendar-component>
 
@@ -104,14 +109,19 @@
 <script>
 import EmailComponent from "./components/EmailComponent";
 import PasswordComponnent from "./components/PasswordComponnent";
-import NamesComponent from "@/components/NamesComponent";
+import NameComponent from "@/components/NameComponent";
+import LastNameComponent from "@/components/LastNameComponent";
+import ThirdNameComponent from "@/components/ThirdNameComponent";
 import CalendarComponent from "@/components/CalendarComponent";
+
 export default {
   name: 'App',
   components: {
     EmailComponent,
     PasswordComponnent,
-    NamesComponent,
+    NameComponent,
+    LastNameComponent,
+    ThirdNameComponent,
     CalendarComponent
   }
 }
@@ -140,11 +150,10 @@ export default {
 
 .invalid{
   color: Red;
+  font-size: 12px;
+  text-align: left;
 }
 
-.valid{
-  color: green;
-}
 
 .header h1{
   margin-right: 90px;
@@ -446,13 +455,5 @@ input[type="checkbox"] {
 .button2:hover {
   opacity: 0.7;
 }
-
-
-
-
-
-
-
-
 
 </style>
