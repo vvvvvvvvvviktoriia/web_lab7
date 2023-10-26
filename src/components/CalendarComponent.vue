@@ -1,7 +1,7 @@
 <template>
   <div class="input-box">
     <input type="date"
-           min="1900-01-01" v-on:input="checkAge"/>
+           min="1900-01-01" max="2023-10-27" v-on:input="checkAge"/>
   </div>
   <div class="invalid" v-html="age_error"></div>
 </template>
