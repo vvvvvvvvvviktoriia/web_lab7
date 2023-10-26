@@ -1,9 +1,9 @@
 <template>
 
   <div class="input-box">
-    <input type="text"
+    <input type="text" v-model="name" id="name"
            placeholder="Ім'я"
-           required v-on:input="checkName">
+           required v-on:input="checkName"  @input="getName">
   </div>
   <div class="invalid" v-html="name_error"></div>
 
@@ -15,6 +15,7 @@ export default {
   components: {},
   data(){
     return{
+      name: '',
       name_error: '',
     }
   },
@@ -39,6 +40,9 @@ export default {
 
       this.name_error = validateName(name);
     },
+    getName(){
+      this.$emit('name', this.name)
+    }
   }
 }
 </script>
